@@ -1,8 +1,8 @@
-# Projeto Final - "Meus Links"
+# Projeto Final - "ForLinks"
 
 ## Descrição do Projeto
 
-O projeto final, intitulado "Meus Links," é uma aplicação web de gerenciamento de links pessoais que permitirá aos usuários criar, editar, excluir e visualizar links personalizados. Este projeto abrange tanto o desenvolvimento do frontend quanto do backend e utiliza as seguintes tecnologias:
+O projeto final, intitulado "ForLinks," é uma aplicação web de gerenciamento de links pessoais que permitirá aos usuários criar, editar, excluir e visualizar links personalizados. Este projeto abrange tanto o desenvolvimento do frontend quanto do backend e utiliza as seguintes tecnologias:
 
 - Frontend: React
 - Backend: Node.js, Express, Prisma, PostgreSQL
@@ -118,8 +118,4 @@ Aqui estão alguns recursos que podem ser úteis durante o desenvolvimento do pr
 - Documentação do Express.js: [https://expressjs.com/pt-br/](https://expressjs.com/pt-br/)
 - Documentação do PostgreSQL: [https://www.postgresql.org/docs/](https://www.postgresql.org/docs/)
 
-## Entrega do Projeto
 
-- A entrega do projeto deve ser feita até **[data de entrega]**.
-- Crie um repositório Git compartilhado para o projeto e compartilhe-o.
-- Certifique-se de incluir um arquivo README.md no repositório com instruções de como executar a aplicação localmente.

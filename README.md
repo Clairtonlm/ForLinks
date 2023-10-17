@@ -16,7 +16,7 @@ O objetivo principal deste projeto é proporcionar aos alunos a oportunidade de 
 3. Criar um sistema de autenticação de usuário.
 4. Habilitar os usuários a gerenciar seus links personalizados.
 5. Consumir uma API para interagir com os dados de usuário e links.
-6. Praticar boas práticas de desenvolvimento, como organização de código, gerenciamento de dependências e testes.
+6. Praticar boas práticas de desenvolvimento, como organização de código, gerenciamento de dependências e testes de aplicação.
 
 ## Requisitos Funcionais
 

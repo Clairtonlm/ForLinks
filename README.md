@@ -1,18 +1,18 @@
-# Projeto Final - "ForLinks"
+# Projeto Final - "Meus Links"
 
 ## Descrição do Projeto
 
-O projeto final, intitulado "ForLinks," é uma aplicação web de gerenciamento de links pessoais que permitirá aos usuários criar, editar, excluir e visualizar links personalizados. Este projeto abrange tanto o desenvolvimento do frontend quanto do backend e utiliza as seguintes tecnologias:
+O projeto final, intitulado "Meus Links," é uma aplicação web de gerenciamento de links pessoais que permitirá aos usuários criar, editar, excluir e visualizar links personalizados. Este projeto abrange tanto o desenvolvimento do frontend quanto do backend e utiliza as seguintes tecnologias:
 
 - Frontend: React
-- Backend: Node.js, Express, Prisma, PostgreSQL
+- Backend: Node.js, Express, PostgreSQL
 
 ## Objetivos
 
 O objetivo principal deste projeto é proporcionar aos alunos a oportunidade de aplicar os conhecimentos adquiridos em Full Stack Web Development para criar uma aplicação completa e funcional. Os objetivos específicos incluem:
 
 1. Desenvolver a parte frontend da aplicação usando React.
-2. Implementar o backend usando Node.js, Express, Prisma e PostgreSQL.
+2. Implementar o backend usando Node.js, Express e PostgreSQL.
 3. Criar um sistema de autenticação de usuário.
 4. Habilitar os usuários a gerenciar seus links personalizados.
 5. Consumir uma API para interagir com os dados de usuário e links.
@@ -71,7 +71,7 @@ O objetivo principal deste projeto é proporcionar aos alunos a oportunidade de 
 - Configurar o servidor Node.js com Express.
 - Criar rotas para registro, login e gerenciamento de links.
 - Implementar autenticação de usuário usando tokens JWT.
-- Conectar-se a um banco de dados PostgreSQL com o Prisma.
+- Conectar-se a um banco de dados PostgreSQL.
 - Validar dados de entrada e implementar autorização para ações do usuário.
 
 #### Definições de Rotas do Backend
@@ -83,39 +83,19 @@ O objetivo principal deste projeto é proporcionar aos alunos a oportunidade de 
 - `POST /links`: Rota para adicionar um novo link para o usuário autenticado.
 - `PUT /links/:id`: Rota para atualizar um link existente do usuário autenticado.
 - `DELETE /links/:id`: Rota para excluir um link existente do usuário autenticado.
-
-## Diagrama de Entidade e Relacionamento (DER)
-
-```mermaid
-erDiagram
-    Usuario ||--o{ Link : has
-    Usuario {
-        id INT (chave primária)
-        nome STRING
-        username STRING
-        email STRING
-        senha STRING
-    }
-    Link {
-        id INT (chave primária)
-        url STRING
-        titulo STRING
-        ativo BOOLEAN
-        usuario_id INT (chave estrangeira)
-    }
-```
-
-Neste diagrama de entidade e relacionamento, temos duas entidades: "User" e "Link," e o relacionamento entre elas indica que um usuário pode ter muitos links.
-
+ 
 ## Recursos Úteis
 
 Aqui estão alguns recursos que podem ser úteis durante o desenvolvimento do projeto:
 
 - Documentação oficial do React: [https://react.dev/](https://react.dev/)
-- Documentação oficial do Axios: [https://axios-http.com/ptbr/docs/intro](https://axios-http.com/ptbr/docs/intro)
-- Documentação oficial do React Router Dom: [https://reactrouter.com/en/main](https://reactrouter.com/en/main)
-- Documentação do Prisma: [https://www.prisma.io/docs/getting-started](https://www.prisma.io/docs/getting-started)
-- Documentação do Express.js: [https://expressjs.com/pt-br/](https://expressjs.com/pt-br/)
+- Documentação oficial do Axios: [https://axios-http.com/docs/intro](https://axios-http.com/docs/intro)
+- Documentação oficial do React Router Dom: [https://v5.reactrouter.com/web/guides/quick-start](https://v5.reactrouter.com/web/guides/quick-start)
+- Documentação do Express.js: [https://expressjs.com/](https://expressjs.com/)
 - Documentação do PostgreSQL: [https://www.postgresql.org/docs/](https://www.postgresql.org/docs/)
 
+## Entrega do Projeto
 
+- A entrega do projeto deve ser feita até **[data de entrega]**.
+- Crie um repositório Git compartilhado para o projeto e compartilhe-o com o professor.
+- Certifique-se de incluir um arquivo README.md no repositório com instruções de como executar a aplicação localmente.

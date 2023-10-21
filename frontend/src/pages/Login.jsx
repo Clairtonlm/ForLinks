@@ -3,18 +3,25 @@ import { rules } from "./constants";
 import { api } from "../services/api";
 import { Link } from "react-router-dom";
 
-function Cadastro() {
+
+function Login() {
   const [messageApi, contextHolder] = message.useMessage();
 
   const onFinish = async (values) => {
     try {
-      const response = await api.post("/usuarios", values);
+      const response = await api.post("/login", values);
 
       console.log(response.data);
 
+      localStorage.setItem("token", response.data.token);
+
+      localStorage.setItem("id", response.data.usuario.id);
+      localStorage.setItem("email", response.data.usuario.email);
+      localStorage.setItem("nome", response.data.usuario.nome);
+
       messageApi.open({
         type: "success",
-        content: "Usuário cadastrado com sucesso ",
+        content: "Usuário encontrado   com sucesso ",
       });
     } catch (error) {
       messageApi.open({
@@ -25,11 +32,12 @@ function Cadastro() {
   };
 
   return (
-    <Form onFinish={onFinish} style={{ width: "80vw", maxWidth: "512px" }}>
+    <Form onFinish={onFinish}>
       {contextHolder}
       <Row justify={"center"}>
         <Col>
-          <h1>Cadastro</h1>
+          <h1>Login</h1>
+          
         </Col>
       </Row>
 
@@ -37,18 +45,6 @@ function Cadastro() {
         <Col span={24}>
           <Form.Item name="email" rules={rules}>
             <Input placeholder="Email" />
-          </Form.Item>
-        </Col>
-
-        <Col span={24}>
-          <Form.Item name="nome" rules={rules}>
-            <Input placeholder={"Nome"} />
-          </Form.Item>
-        </Col>
-
-        <Col span={24}>
-          <Form.Item name="username" rules={rules}>
-            <Input placeholder={"Username"} />
           </Form.Item>
         </Col>
 
@@ -61,7 +57,7 @@ function Cadastro() {
         <Col span={24}>
           <Form.Item>
             <Button block={true} type="primary" htmlType="submit">
-              Cadastrar
+              Entrar
             </Button>
           </Form.Item>
         </Col>
@@ -70,7 +66,7 @@ function Cadastro() {
       <Row justify={"center"}>
         <Col>
           <Button type="text">
-            <Link to="/login">Deseja fazer login?</Link>{" "}
+            <Link to="/cadastro">Deseja criar uma conta?</Link>
           </Button>
         </Col>
       </Row>
@@ -78,4 +74,4 @@ function Cadastro() {
   );
 }
 
-export default Cadastro;
+export default Login;

@@ -16,7 +16,6 @@ O objetivo principal deste projeto é proporcionar aos alunos a oportunidade de 
 3. Criar um sistema de autenticação de usuário.
 4. Habilitar os usuários a gerenciar seus links personalizados.
 5. Consumir uma API para interagir com os dados de usuário e links.
-6. Praticar boas práticas de desenvolvimento, como organização de código, gerenciamento de dependências e testes de aplicação.
 
 ## Requisitos Funcionais
 
@@ -53,10 +52,6 @@ O objetivo principal deste projeto é proporcionar aos alunos a oportunidade de 
     - Ao acessar uma rota como.
     - A página de detalhes deve mostrar a bio do usuário e a lista de links personalizados associados a ele.
 
-
-## Requisitos do Projeto
-
-
 ### Frontend
 
 - Criar páginas para registro e login de usuário.
@@ -71,7 +66,7 @@ O objetivo principal deste projeto é proporcionar aos alunos a oportunidade de 
 - Configurar o servidor Node.js com Express.
 - Criar rotas para registro, login e gerenciamento de links.
 - Implementar autenticação de usuário usando tokens JWT.
-- Conectar-se a um banco de dados PostgreSQL.
+- Conectar-se a um banco de dados PostgreSQL com o .
 - Validar dados de entrada e implementar autorização para ações do usuário.
 
 #### Definições de Rotas do Backend
@@ -91,6 +86,7 @@ Aqui estão alguns recursos que podem ser úteis durante o desenvolvimento do pr
 - Documentação oficial do React: [https://react.dev/](https://react.dev/)
 - Documentação oficial do Axios: [https://axios-http.com/docs/intro](https://axios-http.com/docs/intro)
 - Documentação oficial do React Router Dom: [https://v5.reactrouter.com/web/guides/quick-start](https://v5.reactrouter.com/web/guides/quick-start)
+- Documentação do : [https://.io/docs/](https://.io/docs/)
 - Documentação do Express.js: [https://expressjs.com/](https://expressjs.com/)
 - Documentação do PostgreSQL: [https://www.postgresql.org/docs/](https://www.postgresql.org/docs/)
 
@@ -99,3 +95,4 @@ Aqui estão alguns recursos que podem ser úteis durante o desenvolvimento do pr
 - A entrega do projeto deve ser feita até **[data de entrega]**.
 - Crie um repositório Git compartilhado para o projeto e compartilhe-o com o professor.
 - Certifique-se de incluir um arquivo README.md no repositório com instruções de como executar a aplicação localmente.
+# projeto

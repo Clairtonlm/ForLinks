@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const { Pool } = require("pg");
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 
 const pool = new Pool({
   host: "localhost",
@@ -27,10 +29,11 @@ app.get("/usuarios", async (req, res) => {
 app.post("/usuarios", async (req, res) => {
   try {
     const usuario = req.body;
-    console.log(usuario);
+
+    const senhaEncriptada = await bcrypt.hash(usuario.senha, 12);
 
     await pool.query(
-      `insert into usuario values(default, '${usuario.nome}', '${usuario.email}', '${usuario.senha}','${usuario.username}')`
+      `insert into usuario values(default, '${usuario.nome}', '${usuario.email}', '${senhaEncriptada}','${usuario.username}')`
     );
 
     res.sendStatus(201);
@@ -45,14 +48,20 @@ app.post("/login", async (req, res) => {
     const usuario = req.body;
     console.log(usuario);
 
-    const resultado = await pool.query(
-      `select * from usuario where email = '${usuario.email}' and senha = '${usuario.senha}'`
-    );
+    const resultado = await pool.query(`select * from usuario where email = '${usuario.email}'`);
+    const usuarioBanco = resultado.rows[0];
 
-    console.log(resultado.rows);
-
-    if (resultado.rows.length > 0) {
-      res.sendStatus(200);
+    if (resultado.rows.length > 0 && bcrypt.compareSync(usuario.senha, usuarioBanco.senha)) {
+      res.send({
+        token: jwt.sign({ id: usuarioBanco.id }, "macacobanana", {
+          expiresIn: "10m",
+        }),
+        usuario: {
+          id: usuarioBanco.id,
+          nome: usuarioBanco.nome,
+          email: usuarioBanco.email
+        }
+      });
     } else {
       res.status(401).send({ error: "Usuário ou Senha Inválido!" });
     }

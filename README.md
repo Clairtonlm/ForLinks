@@ -4,7 +4,7 @@
 
 O projeto final, intitulado "Meus Links," é uma aplicação web de gerenciamento de links pessoais que permitirá aos usuários criar, editar, excluir e visualizar links personalizados. Este projeto abrange tanto o desenvolvimento do frontend quanto do backend e utiliza as seguintes tecnologias:
 
-- Frontend: React
+- Frontend: React e AntDesigner.
 - Backend: Node.js, Express, Banco PostgreSQL
 
 ## Objetivos
